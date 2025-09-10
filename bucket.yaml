@@ -2,7 +2,7 @@ apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
 metadata:
   namespace: default
-  generateName: crossplane-bucket-
+  generateName: crossplane-bucket-demo-kristian
 spec:
   forProvider:
     region: us-east-2
