@@ -6,3 +6,4 @@ metadata:
 spec:
   forProvider:
     region: us-east-2
+    bucket: crossplane-bucket-1
