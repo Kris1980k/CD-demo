@@ -1,13 +1,8 @@
 apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
 metadata:
-  name: crossplane-bucket-1
   namespace: default
-  annotations:
-    argocd.argoproj.io/tracking-id: cd-demo:s3.aws.m.upbound.io/Bucket:default/crossplane-bucket-1
+  generateName: crossplane-bucket-
 spec:
   forProvider:
-    # Don't specify bucket name at all - AWS will generate one
     region: us-east-2
-  providerConfigRef:
-    name: default
