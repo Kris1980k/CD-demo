@@ -5,4 +5,4 @@ metadata:
   name: crossplane-bucket-1
 spec:
   forProvider:
-    region: us-east-1
+    region: us-east-2
