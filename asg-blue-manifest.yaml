@@ -8,5 +8,5 @@ spec:
     maxSize: 3
     region: us-east-1
   providerConfigRef:
-    name: default
+    name: skibidi
     kind: ClusterProviderConfig
