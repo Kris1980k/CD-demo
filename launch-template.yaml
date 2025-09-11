@@ -7,7 +7,7 @@ spec:
   forProvider:
     launchTemplateData:
       imageID: ami-0b09ffb6d8b58ca91
-      instanceType: t3.small         
+      instanceType: m7i-flex.large       
       keyName: kube
       tagSpecifications:
         - resourceType: instance
