@@ -1,9 +1,12 @@
 apiVersion: ec2.aws.crossplane.io/v1alpha1
 kind: LaunchTemplate
 metadata:
-  name: test-crossplane-obj
+  name: httpd-launch-template
+  namespace: default
 spec:
   forProvider:
+    imageId: ami-0c02fb55956c7d316
+    instanceType: t3.micro
     launchTemplateData:
       keyName: kube
       tagSpecifications:
@@ -11,7 +14,7 @@ spec:
           tags:
             - key: original
               value: "1"
-    launchTemplateName: test-crossplane-obj
+    launchTemplateName: httpd-launch-template
     region: us-east-1
   providerConfigRef:
     name: default
