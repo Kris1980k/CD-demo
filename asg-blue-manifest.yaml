@@ -8,8 +8,7 @@ spec:
     maxSize: 3
     region: us-east-1
     launchTemplate:
-      - LaunchTemplateName: httpd-launch-template
-        version: "$Latest"
+      LaunchTemplateName: httpd-launch-template
 
     availabilityZones: 
       - "us-east-1d"
