@@ -1,3 +1,5 @@
+
+
 apiVersion: ec2.aws.crossplane.io/v1alpha1
 kind: LaunchTemplate
 metadata:
@@ -6,15 +8,14 @@ metadata:
 spec:
   forProvider:
     launchTemplateData:
-      imageID: ami-0b09ffb6d8b58ca91
+      imageId: ami-0c02fb55956c7d316    # Cambiado: imageId (no imageID) en v1alpha1
       instanceType: t3.micro                 
       keyName: kube
-      tagSpecifications:
+      tagSpecification:                      # Cambiado: singular en v1alpha1
         - resourceType: instance
           tags:
-            - key: original
-              value: "1"
-    launchTemplateName: httpd-launch-template
+            original: "1"                    # Cambiado: formato directo en v1alpha1
+    name: httpd-launch-template              # Cambiado: name (no launchTemplateName) en v1alpha1
     region: us-east-1
   providerConfigRef:
     name: default
