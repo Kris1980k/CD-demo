@@ -4,7 +4,7 @@ metadata:
   name: httpd-launch-template
   namespace: default
 spec:
-  atProvider:
+  forProvider:
     instanceType: t3.micro
     launchTemplateData:
       imageID: ami-0b2f2a5d7a4d7f37f
