@@ -1,4 +1,4 @@
-apiVersion: ec2.aws.crossplane.io/v1alpha1
+apiVersion: ec2.aws.upbound.io/v1beta2
 kind: LaunchTemplate
 metadata:
   name: httpd-launch-template
@@ -6,8 +6,8 @@ metadata:
 spec:
   forProvider:
     launchTemplateData:
-      imageID: ami-0c02fb55956c7d316 
-      instanceType: m7i-flex.large       
+      imageID: ami-0b09ffb6d8b58ca91
+      instanceType: t3.micro      
       keyName: kube
       tagSpecifications:
         - resourceType: instance
