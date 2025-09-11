@@ -14,4 +14,4 @@ spec:
     launchTemplateName: test-crossplane-obj
     region: us-east-1
   providerConfigRef:
-    name: example
+    name: default
