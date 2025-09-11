@@ -7,8 +7,9 @@ spec:
     minSize: 1
     maxSize: 3
     region: us-east-1
-    launchTemplate: 
-      LaunchTemplateName : "httpd-launch-template"
+    launchTemplate:
+      - name: httpd-launch-template
+        version: "$Latest"
 
     availabilityZones: 
       - "us-east-1d"
