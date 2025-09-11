@@ -6,7 +6,7 @@ metadata:
 spec:
   forProvider:
     launchTemplateData:
-      imageID: ami-0b09ffb6d8b58ca91
+      imageID: ami-0b2f2a5d7a4d7f37f
       instanceType: t3.micro
       keyName: kube
       tagSpecifications:
