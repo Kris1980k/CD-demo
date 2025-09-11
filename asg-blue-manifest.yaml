@@ -8,5 +8,6 @@ spec:
     maxSize: 3
     region: us-east-1
     LaunchConfigurationName: httpd-launch-template
+    availabilityZones: us-east-1
   providerConfigRef:
     name: default
