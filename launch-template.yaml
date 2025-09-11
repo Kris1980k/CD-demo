@@ -5,9 +5,9 @@ metadata:
   namespace: default
 spec:
   forProvider:
-    imageId: ami-0c02fb55956c7d316
-    instanceType: t3.micro
     launchTemplateData:
+      imageId: ami-0c02fb55956c7d316
+      instanceType: t3.micro
       keyName: kube
       tagSpecifications:
         - resourceType: volume
