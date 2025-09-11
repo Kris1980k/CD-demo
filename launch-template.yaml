@@ -1,15 +1,17 @@
 apiVersion: ec2.aws.crossplane.io/v1alpha1
 kind: LaunchTemplate
 metadata:
-  name: httpd-launch-template
-  namespace: default
+  name: test-crossplane-obj
 spec:
   forProvider:
-    name: httpd-server-template
-    description: "Launch template for Apache HTTP Server"
-    imageId: ami-0b09ffb6d8b58ca91 
-    instanceType: t3.micro
-    keyName: MiniKube
-    securityGroupIds:
-      - sg-0155765612c29da07
-    
+    launchTemplateData:
+      keyName: kube
+      tagSpecifications:
+        - resourceType: volume
+          tags:
+            - key: original
+              value: "1"
+    launchTemplateName: test-crossplane-obj
+    region: us-east-1
+  providerConfigRef:
+    name: example
