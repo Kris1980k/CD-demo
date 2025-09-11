@@ -7,9 +7,9 @@ spec:
     minSize: 1
     maxSize: 3
     region: us-east-1
-    LaunchTemplate:
+    launchTemplate: {
       launchTemplateName: httpd-launch-template
-
+      }
     availabilityZones: 
       - "us-east-1d"
   providerConfigRef:
