@@ -2,7 +2,7 @@ apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
 metadata:
   namespace: default
-  name: crossplane-bucket-demo-ariel-us-east-2
+  name: bucket-ariel-us-east-2
 spec:
   forProvider:
     region: us-east-2
