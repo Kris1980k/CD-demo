@@ -7,5 +7,7 @@ spec:
     minSize: 1
     maxSize: 3
     region: us-east-1
+    launchTemplate:
+      launchTemplateName: httpd-launch-template
   providerConfigRef:
     name: default
