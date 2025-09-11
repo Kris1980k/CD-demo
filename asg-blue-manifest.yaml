@@ -7,3 +7,6 @@ spec:
     minSize: 1
     maxSize: 3
     region: us-east-1
+    providerConfigRef:
+      name: default
+      kind: ClusterProviderConfig
