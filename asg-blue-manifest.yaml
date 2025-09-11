@@ -9,6 +9,6 @@ spec:
     region: us-east-1
     launchConfigurationName: httpd-launch-template
     availabilityZones: 
-      - "us-east-1"
+      - "us-east-1d"
   providerConfigRef:
     name: default
