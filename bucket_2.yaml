@@ -1,0 +1,8 @@
+apiVersion: s3.aws.m.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  namespace: default
+  name: crossplane-bucket-demo-hassan
+spec:
+  forProvider:
+    region: us-east-1
