@@ -1,6 +1,7 @@
 apiVersion: autoscaling.aws.crossplane.io/v1beta1
 kind: AutoScalingGroup
 metadata:
+  name: asg-blue
 spec: 
   forProvider:
     minSize: 1
