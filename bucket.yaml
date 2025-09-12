@@ -1,0 +1,26 @@
+apiVersion: s3.aws.m.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  namespace: default
+  name: bucket-blue-us-east-1
+spec:
+  forProvider:
+    region: us-east-1
+---
+apiVersion: s3.aws.m.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  namespace: default
+  name: bucket-red-us-east-1
+spec:
+  forProvider:
+    region: us-east-1
+---
+apiVersion: s3.aws.m.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  namespace: default
+  name: bucket-green-us-east-1
+spec:
+  forProvider:
+    region: us-east-1
