@@ -1,2 +1,10 @@
 apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: Instance
+spec:
+  forProvider:
+    ami: ami-0b09ffb6d8b58ca91
+    instanceType: t3.micro
+    region: us-east-1
+  providerConfigRef:
+    kind: ProviderConfig
+    name: default
