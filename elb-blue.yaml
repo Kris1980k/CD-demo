@@ -12,4 +12,3 @@ spec:
         lbProtocol: http
   providerConfigRef:
     name: default
-    kind: ClusterProviderConfig
