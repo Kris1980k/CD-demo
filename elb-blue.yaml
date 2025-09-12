@@ -2,3 +2,10 @@ apiVersion: elb.aws.upbound.io/v1beta1
 kind: ELB
 metadata:
   name: example
+spec:
+  forProvider:
+    listener:
+      - instancePort: 8000
+        instanceProtocol: http
+        lbPort: 80
+        lbProtocol: http
