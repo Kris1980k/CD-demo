@@ -4,9 +4,10 @@ metadata:
   name: elb-blue
 spec:
   forProvider:
+    region: us-east-1
     listener:
       - instancePort: 8000
         instanceProtocol: http
         lbPort: 80
         lbProtocol: http
-        region: us-east-1
+        
