@@ -9,3 +9,4 @@ spec:
         instanceProtocol: http
         lbPort: 80
         lbProtocol: http
+        region: us-east-1
