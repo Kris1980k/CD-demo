@@ -6,6 +6,8 @@ metadata:
 spec:
   forProvider:
     region: us-east-1
+providerConfigRef:
+  name: default
 ---
 apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
@@ -15,6 +17,8 @@ metadata:
 spec:
   forProvider:
     region: us-east-1
+providerConfigRef:
+  name: default
 ---
 apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
@@ -24,3 +28,5 @@ metadata:
 spec:
   forProvider:
     region: us-east-1
+providerConfigRef:
+  name: default
