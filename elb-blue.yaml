@@ -1,7 +1,7 @@
 apiVersion: elb.aws.upbound.io/v1beta1
 kind: ELB
 metadata:
-  name: example
+  name: elb-blue
 spec:
   forProvider:
     listener:
