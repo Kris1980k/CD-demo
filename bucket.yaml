@@ -3,39 +3,6 @@ kind: Bucket
 metadata:
   namespace: default
   name: bucket-blue-us-east-1-kristian-mazatlan
-  annotations:
-    argocd.argoproj.io/sync-wave: "4"
 spec:
   forProvider:
     region: us-east-1
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
----
-apiVersion: s3.aws.m.upbound.io/v1beta1
-kind: Bucket
-metadata:
-  namespace: default
-  name: bucket-red-us-east-1-kristian-mazatlan
-  annotations:
-    argocd.argoproj.io/sync-wave: "4"
-spec:
-  forProvider:
-    region: us-east-1
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
----
-apiVersion: s3.aws.m.upbound.io/v1beta1
-kind: Bucket
-metadata:
-  namespace: default
-  name: bucket-green-us-east-1-kristian-mazatlan
-  annotations:
-    argocd.argoproj.io/sync-wave: "4"
-spec:
-  forProvider:
-    region: us-east-1
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
