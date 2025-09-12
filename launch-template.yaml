@@ -4,16 +4,15 @@ metadata:
   name: httpd-launch-template
 spec:
   forProvider:
-    launchTemplateData:
-      imageID: ami-0b09ffb6d8b58ca91
-      instanceType: t3.micro      
-      keyName: kube
-      tagSpecifications:
-        - resourceType: instance
-          tags:
-            - key: original
-              value: "1"
-    launchTemplateName: httpd-launch-template
+    imageID: ami-0b09ffb6d8b58ca91
+    instanceType: t3.micro      
+    keyName: kube
+    tagSpecifications:
+      - resourceType: instance
+        tags:
+          - key: original
+            value: "1"
+    name: httpd-launch-template
     region: us-east-1
   providerConfigRef:
     name: default
