@@ -10,4 +10,6 @@ spec:
         instanceProtocol: http
         lbPort: 80
         lbProtocol: http
-        
+  providerConfigRef:
+    name: default
+    kind: ClusterProviderConfig
