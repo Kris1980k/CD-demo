@@ -5,11 +5,11 @@ metadata:
 spec:
   forProvider:
     imageId: ami-0b09ffb6d8b58ca91
-    instanceType: t3.micro      
+    instanceType: t3.micro
     keyName: kube
-    tagSpecifications:
-      resourceType: instance
     name: httpd-launch-template
     region: us-east-1
   providerConfigRef:
     name: default
+
+~                                          
