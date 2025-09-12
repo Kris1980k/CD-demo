@@ -8,6 +8,7 @@ spec:
     region: us-east-1
   providerConfigRef:
     name: default
+    kind: ProviderConfig
 ---
 apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
@@ -19,6 +20,7 @@ spec:
     region: us-east-1
   providerConfigRef:
     name: default
+    kind: ProviderConfig
 ---
 apiVersion: s3.aws.m.upbound.io/v1beta1
 kind: Bucket
@@ -30,3 +32,4 @@ spec:
     region: us-east-1
   providerConfigRef:
     name: default
+    kind: ProviderConfig
