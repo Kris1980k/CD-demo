@@ -13,4 +13,3 @@ spec:
       - "us-east-1d"
   providerConfigRef:
     name: default
-    kind: ClusterProviderConfig
