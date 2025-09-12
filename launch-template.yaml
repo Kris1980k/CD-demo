@@ -2,7 +2,6 @@ apiVersion: ec2.aws.upbound.io/v1beta1
 kind: LaunchTemplate
 metadata:
   name: httpd-launch-template
-  namespace: default
 spec:
   forProvider:
     launchTemplateData:
