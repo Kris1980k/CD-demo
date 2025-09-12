@@ -8,8 +8,9 @@ spec:
     maxSize: 3
     region: us-east-1
     launchTemplate: 
-      launchTemplateName: httpd-launch-template
+      name: httpd-launch-template
     availabilityZones: 
       - "us-east-1d"
   providerConfigRef:
     name: default
+    kind: ClusterProviderConfig
