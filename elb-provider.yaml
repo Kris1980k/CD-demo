@@ -1,6 +1,0 @@
-apiVersion: pkg.crossplane.io/v1
-kind: Provider
-metadata:
-  name: upbound-provider-aws-elb
-spec:
-  package: xpkg.upbound.io/upbound/provider-aws-elb:v2
