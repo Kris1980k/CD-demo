@@ -6,6 +6,6 @@ spec:
   credentials: 
     source: Secret
     secretRef:
-      namespace: crossplane-system
+      namespace: demo
       name: aws-secret
       key: creds
