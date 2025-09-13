@@ -22,6 +22,7 @@ metadata:
     template: template1
 spec:
   forProvider:
+    imageId: ami-0b09ffb6d8b58ca91
     blockDeviceMappings:
         - deviceName: /dev/sda1
           ebs:
