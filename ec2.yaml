@@ -12,3 +12,20 @@ spec:
   providerConfigRef:
     name: default
     kind: ProviderConfig
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: LaunchTemplate
+metadata:
+  name: ec2-launch-template-1
+  namespace: demo
+spec:
+  forProvider:
+    blockDeviceMappings:
+        - deviceName: /dev/sda1
+          ebs:
+            volumeSize: 20
+    instanceType: t3.micro
+    region: us-west-1
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
