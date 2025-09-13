@@ -23,6 +23,7 @@ kubectl version --client -o json</pre>
 <pre>curl -sfL https://get.k3s.io | sh - 
 sudo k3s kubectl get node 
 alias kubectl='sudo k3s kubectl'
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 </pre>
 
 # Install ArgoCD 
@@ -83,8 +84,12 @@ chmod 700 get_helm.sh
 `helm repo update`
 
 <pre>helm install crossplane \
---namespace crossplane-system \
---create-namespace crossplane-stable/crossplane</pre>
+  --namespace crossplane-system \
+  --create-namespace \
+  crossplane-stable/crossplane \
+  --kubeconfig $KUBECONFIG</pre>
+
+
 
 
 
