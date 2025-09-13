@@ -42,12 +42,33 @@ kubectl get all --namespace=argocd</pre>
 sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
 rm argocd-linux-amd64</pre>
 
-### Install ArgoCD Services
+### Create a nodeport via YAML to connect to the service
+<pre>
+  apiVersion: v1
+kind: Service
+metadata:
+  name: argocd-server-nodeport
+  namespace: argocd
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30007 # Specify the nodePort you want to use, or let Kubernetes allocate one for you.
+  selector:
+    app.kubernetes.io/name: argocd-server
+</pre>
 
-<pre>kubectl get svc -n argocd
-kubectl port-forward svc/argocd-server 8080:443 -n argocd
-kubectl port-forward --address 0.0.0.0 svc/argocd-server 8080:443 -n argocd</pre>
+<pre>
+kubectl apply -f argocd-server-nodeport.yaml
+</pre>
 
+<pre>
+
+  kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+kubectl get svc -n argocd
+
+</pre>
 # Install Helm
 
 <pre>curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
