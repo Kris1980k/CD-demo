@@ -9,10 +9,13 @@ spec:
   forProvider:
     subnetSelector:
       matchLabels:
-        testing.upbound.io/e: elbv2
+        testing.upbound.io/elb: elbv2
     loadBalancerType: application
     name: lb-1
     region: us-east-1  
+    securityGroupSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
   providerConfigRef:
     name: default
     kind: ProviderConfig
@@ -77,7 +80,7 @@ metadata:
   name: subnet-2
   namespace: demo
   labels:
-    testing.upbound.io/e: elbv2
+    testing.upbound.io/elb: elbv2
 spec:
   providerConfigRef:
     name: default
@@ -96,7 +99,7 @@ metadata:
   name: securitygroup-1
   namespace: demo
   labels:
-    securitygroup: securitygroup-1
+    testing.upbound.io/elb: elbv2
 spec:
   providerConfigRef:
     name: default
