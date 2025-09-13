@@ -4,12 +4,12 @@ metadata:
   name: lb-1
   namespace: demo
   labels:
-    lb: lb-1
+    testing.upbound.io/elb: elbv2
 spec:
   forProvider:
     subnetSelector:
       matchLabels:
-        testing.upbound.io/example-name: elbv2
+        testing.upbound.io/e: elbv2
     loadBalancerType: application
     name: lb-1
     region: us-east-1  
@@ -23,7 +23,7 @@ metadata:
   name: vpc-1
   namespace: demo
   labels:
-    vpc: vpc-1
+    testing.upbound.io/elb: elbv2
 spec:
   forProvider:
     cidrBlock: 172.16.0.0/16
@@ -38,9 +38,12 @@ metadata:
   name: internet-gateway-1
   namespace: demo
   labels:
-    internet-gateway: internet-gateway-1
+    testing.upbound.io/elb: elbv2
 spec:
   forProvider:
+    vpcIdSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
     region: us-east-1
     vpcIdSelector:
       matchLabels:
@@ -55,7 +58,7 @@ metadata:
   name: subnet-1
   namespace: demo
   labels:
-    subnet: subnet-1
+    testing.upbound.io/elb: elbv2
 spec:
   providerConfigRef:
     name: default
@@ -74,7 +77,7 @@ metadata:
   name: subnet-2
   namespace: demo
   labels:
-    subnet: subnet-2
+    testing.upbound.io/e: elbv2
 spec:
   providerConfigRef:
     name: default
