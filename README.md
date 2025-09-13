@@ -9,7 +9,7 @@
 ```sudo dnf install docker -y
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo usermod -aG docker $USER && newgrp docker```
+sudo usermod -aG docker $USER && newgrp docker ```
 
 ### Install KubeCTL
 
