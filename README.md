@@ -2,7 +2,7 @@
 
 ## Update your system
 
-sudo dnf update -y
+´´´ sudo dnf update -y
 
 ## Install Docker
 
