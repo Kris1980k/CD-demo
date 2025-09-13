@@ -21,7 +21,9 @@ kubectl version --client -o json</pre>
 ### Install K3s (lightweight kubernetes)
 
 <pre>curl -sfL https://get.k3s.io | sh - 
-sudo k3s kubectl get node </pre>
+sudo k3s kubectl get node 
+alias kubectl='k3s kubectl'
+</pre>
 
 # Install ArgoCD 
 
