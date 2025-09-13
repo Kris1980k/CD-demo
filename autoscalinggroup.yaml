@@ -7,6 +7,7 @@ spec:
   forProvider:
     minSize: 2
     maxSize: 3
+    region: us-east-1
     availabilityZones: [us-east-1a,us-east-1b,us-east-1c,us-east-1d]
     launchTemplate: 
       idSelector:
