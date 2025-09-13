@@ -25,7 +25,7 @@ spec:
           ebs:
             volumeSize: 20
     instanceType: t3.micro
-    region: us-west-1
+    region: us-east-1
   providerConfigRef:
     name: default
     kind: ProviderConfig
