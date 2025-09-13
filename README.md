@@ -11,36 +11,36 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER && newgrp docker
 
-## Install KubeCTL
+### Install KubeCTL
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 kubectl version --client -o json
 
-## Install K3s (lightweight kubernetes)
+### Install K3s (lightweight kubernetes)
 
 curl -sfL https://get.k3s.io | sh - 
 sudo k3s kubectl get node 
 
 # Install ArgoCD 
 
-## Create namespace
+### Create namespace
 
 kubectl create namespace argocd
 
-## Install ArgoCD
+### Install ArgoCD
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 kubectl get all --namespace=argocd
 
-## Install ArgoCD CLI
+### Install ArgoCD CLI
 
 curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
 rm argocd-linux-amd64
 
-## Install ArgoCD Services
+### Install ArgoCD Services
 
 kubectl get svc -n argocd
 kubectl port-forward svc/argocd-server 8080:443 -n argocd
