@@ -11,3 +11,4 @@ spec:
     region: us-east-1
   providerConfigRef:
     name: default
+    kind: ProviderConfig
