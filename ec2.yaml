@@ -2,7 +2,7 @@ apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: Instance
 metadata:
   name: ec2-instance-1
-  namespace: default
+  namespace: demo
 spec:
   forProvider:
     ami: ami-0b09ffb6d8b58ca91
