@@ -43,7 +43,9 @@
 ### Install ArgoCD Services
 
 `kubectl get svc -n argocd`
+
 `kubectl port-forward svc/argocd-server 8080:443 -n argocd`
+
 `kubectl port-forward --address 0.0.0.0 svc/argocd-server 8080:443 -n argocd`
 
 # Install Helm
