@@ -18,6 +18,8 @@ kind: LaunchTemplate
 metadata:
   name: ec2-launch-template-1
   namespace: demo
+  labels: 
+    template: template1
 spec:
   forProvider:
     blockDeviceMappings:
