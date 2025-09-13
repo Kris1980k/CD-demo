@@ -50,7 +50,7 @@ spec:
     region: us-east-1
     vpcIdSelector:
       matchLabels:
-        vpc: vpc-1
+        testing.upbound.io/elb: elbv2
   providerConfigRef:
     name: default
     kind: ProviderConfig
@@ -72,7 +72,7 @@ spec:
     region: us-east-1
     vpcIdSelector:
       matchLabels:
-        vpc: vpc-1
+        testing.upbound.io/elb: elbv2
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: Subnet
@@ -91,7 +91,7 @@ spec:
     region: us-east-1
     vpcIdSelector:
       matchLabels:
-        vpc: vpc-1
+        testing.upbound.io/elb: elbv2
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: SecurityGroup
@@ -112,4 +112,4 @@ spec:
       Name: east
     vpcIdSelector:
       matchLabels:
-        vpc: vpc-1
+        testing.upbound.io/elb: elbv2
