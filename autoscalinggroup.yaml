@@ -3,6 +3,8 @@ kind: AutoscalingGroup
 metadata:
   name: autoscalinggroup-1
   namespace: demo
+  labels:
+    asg: asg-1
 spec:
   forProvider:
     minSize: 2
