@@ -2,7 +2,7 @@ apiVersion: autoscaling.aws.m.upbound.io/v1beta1
 kind: AutoscalingGroup
 metadata:
   name: autoscalinggroup-1
-  namespace: default
+  namespace: demo
 spec:
   forProvider:
     minSize: 2
