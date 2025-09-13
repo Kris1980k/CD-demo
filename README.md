@@ -1,10 +1,10 @@
 # Requirements
 
-## Update your system
+### Update your system
 
 sudo dnf update -y 
 
-## Install Docker
+### Install Docker
 
 sudo dnf install docker -y
 sudo systemctl start docker
