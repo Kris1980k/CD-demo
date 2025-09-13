@@ -1,0 +1,106 @@
+apiVersion: elbv2.aws.m.upbound.io/v1beta1
+kind: LB
+metadata:
+  name: lb-1
+  namespace: demo
+  labels:
+    lb: lb-1
+spec:
+  forProvider:
+    loadBalancerType: application
+    name: lb-1
+    region: us-east-1  
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: VPC
+metadata:
+  name: vpc-1
+  namespace: demo
+  labels:
+    vpc: vpc-1
+spec:
+  forProvider:
+    cidrBlock: 172.16.0.0/16
+    region: us-east-1  
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: InternetGateway
+metadata:
+  name: internet-gateway-1
+  namespace: demo
+  labels:
+    internet-gateway: internet-gateway-1
+spec:
+  forProvider:
+    region: us-east-1
+    vpcIdSelector:
+      matchLabels:
+        vpc: vpc-1
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: Subnet
+metadata:
+  name: subnet-1
+  namespace: demo
+  labels:
+    subnet: subnet-1
+spec:
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
+  forProvider:
+    availabilityZone: us-east-1a
+    cidrBlock: 172.16.10.0/24
+    region: us-east-1
+    vpcIdSelector:
+      matchLabels:
+        vpc: vpc-1
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: Subnet
+metadata:
+  name: subnet-2
+  namespace: demo
+  labels:
+    subnet: subnet-2
+spec:
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
+  forProvider:
+    availabilityZone: us-east-1b
+    cidrBlock: 172.16.20.0/24
+    region: us-east-1
+    vpcIdSelector:
+      matchLabels:
+        vpc: vpc-1
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: SecurityGroup
+metadata:
+  name: securitygroup-1
+  namespace: demo
+  labels:
+    securitygroup: securitygroup-1
+spec:
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
+  forProvider:
+    description: Allow TLS inbound traffic
+    name: allow_tls
+    region: us-east-1
+    tags:
+      Name: east
+    vpcIdSelector:
+      matchLabels:
+        vpc: vpc-1
