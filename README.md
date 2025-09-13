@@ -92,6 +92,11 @@ chmod 700 get_helm.sh
 
 
 
+# Create secret
+
+<pre>kubectl create secret generic aws-secret \
+  --namespace=crossplane-system \
+  --from-file=creds=./aws-credentials.ini</pre>
 
 
 
