@@ -1,0 +1,15 @@
+apiVersion: autoscaling.aws.m.upbound.io/v1beta1
+kind: AutoscalingGroup
+metadata:
+  name: autoscalinggroup-1
+  namespace: default
+spec:
+  forProvider:
+    availabilityZones: [us-east-1a,us-east-1b,us-east-1c,us-east-1d]
+    launchTemplate: 
+      idSelector:
+          matchLabels:
+            template: template1
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
