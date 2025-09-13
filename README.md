@@ -24,6 +24,7 @@ kubectl version --client -o json</pre>
 sudo k3s kubectl get node 
 alias kubectl='sudo k3s kubectl'
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+sudo chmod +r /etc/rancher/k3s/k3s.yaml
 </pre>
 
 # Install ArgoCD 
