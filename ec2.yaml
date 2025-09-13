@@ -9,3 +9,5 @@ spec:
     availabilityZone: us-east-1d
     instanceType: t3.micro
     region: us-east-1
+  providerConfigRef:
+    name: default
