@@ -1,0 +1,17 @@
+apiVersion: elbv2.aws.m.upbound.io/v1beta1
+kind: LBTargetGroup
+metadata: 
+  name: lbtargetgroup-1
+  namespace: demo
+  labels
+spec:
+  forProvider:
+    name: lbtargetgroup-1
+    region: us-east-1
+    vpcIdSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
+      
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
