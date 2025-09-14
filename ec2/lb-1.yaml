@@ -136,4 +136,5 @@ spec:
     securityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
+      namespace: demo      
 
