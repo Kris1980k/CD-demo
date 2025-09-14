@@ -128,7 +128,7 @@ spec:
   forProvider:
     fromPort: 80
     toPort: 80
-    ipProtocol: 4
+    ipProtocol: 'tcp' 
     region: us-east-1
     referencedSecurityGroupIdSelector:
       matchLabels:
