@@ -138,6 +138,29 @@ spec:
         testing.upbound.io/elb: elbv2
     securityGroupIdSelector:
       matchLabels:
+        testing.upbound.io/elb: elbv2                
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: SecurityGroupIngressRule
+metadata:
+  name: securitygroup-rule-2
+  namespace: demo
+  labels:
+    testing.upbound.io/elb: elbv2
+spec:
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig  
+  forProvider:
+    fromPort: 80
+    toPort: 80
+    ipProtocol: 'tcp' 
+    region: us-east-1
+    referencedSecurityGroupIdSelector:
+      matchLabels:
         testing.upbound.io/elb: elbv2
+    securityGroupIdSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2        
      
 
