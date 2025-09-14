@@ -133,8 +133,5 @@ spec:
     toPort: 80
     ipProtocol: 'tcp' 
     region: us-east-1
-    securityGroupIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
-      namespace: demo      
+     
 
