@@ -152,8 +152,8 @@ spec:
     name: default
     kind: ProviderConfig  
   forProvider:
-    IpProtocol: "-1"
-    CidrIp: 0.0.0.0/0
+    ipProtocol: "-1"
+    cidrIp: 0.0.0.0/0
     region: us-east-1
     referencedSecurityGroupIdSelector:
       matchLabels:
