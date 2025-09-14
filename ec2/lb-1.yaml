@@ -29,6 +29,7 @@ metadata:
     testing.upbound.io/elb: elbv2
 spec:
   forProvider:
+    defaultSecurityGroupId: "securityGroupId-1"
     cidrBlock: 172.16.0.0/16
     region: us-east-1  
   providerConfigRef:
