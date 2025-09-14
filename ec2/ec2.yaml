@@ -24,19 +24,21 @@ spec:
   forProvider:
     imageId: ami-0b09ffb6d8b58ca91
     blockDeviceMappings:
-        - deviceName: /dev/sda1
-          ebs:
-            volumeSize: 20
+      - deviceName: /dev/sda1
+        ebs:
+          volumeSize: 20
     instanceType: t3.micro
     region: us-east-1
-    userData: 
-      #!/bin/bash
-      yum update -y
-      yum install -y httpd
-      systemctl start httpd
-      systemctl enable httpd
-      echo '<h1>Hello wordl from $(hostname -f)</h1>' /var/www/html/index.html
+    userData: "IyEvYmluL2Jhc2gKeXVtIHVwZGF0ZSAteQp5dW0gaW5zdGFsbCAteSBodHRwZApzeXN0ZW1jdGwgc3RhcnQgaHR0ZApzeXN0ZW1jdGwKZW5hYmxlIGh0dHBkCmVjaG8gJzxoMT5IZWxsbyB3b3JsZCBmcm9tICQoaG9zdG5hbWUgLWYpPC9oMT4nID4gL3Zhci93d3cvaHRtbC9pbmRleC5odG1sCg=="
 
   providerConfigRef:
     name: default
     kind: ProviderConfig
+
+
+# !/bin/bash
+# yum update -y
+# yum install -y httpd
+# systemctl start httpd
+# systemctl enable httpd
+# echo '<h1>Hello world from $(hostname -f)</h1>' > /var/www/html/index.html
