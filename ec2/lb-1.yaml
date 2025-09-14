@@ -152,9 +152,8 @@ spec:
     name: default
     kind: ProviderConfig  
   forProvider:
-    fromPort: 80
-    toPort: 80
-    ipProtocol: 'tcp' 
+    IpProtocol: "-1"
+    CidrIp: 0.0.0.0/0
     region: us-east-1
     referencedSecurityGroupIdSelector:
       matchLabels:
