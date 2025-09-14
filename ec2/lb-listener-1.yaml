@@ -18,9 +18,9 @@ spec:
     loadBalancerArnSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
-    port: 443
+    port: 80
     region: us-east-1
-    protocol: HTTPS
+    protocol: HTTP
   providerConfigRef:
     name: default
     kind: ProviderConfig

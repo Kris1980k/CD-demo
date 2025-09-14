@@ -8,8 +8,8 @@ metadata:
 spec:
   forProvider:
     name: lbtargetgroup-1
-    port: 443
-    protocol: HTTPS
+    port: 80
+    protocol: HTTP
     region: us-east-1
     vpcIdSelector:
       matchLabels:
