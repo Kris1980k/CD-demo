@@ -9,11 +9,11 @@ spec:
   forProvider:
     name : lb-listener-1
     defaultAction:
-      forward:
-        - targetGroup:
+      - forward:
+          targetGroup:
             arnSelector:
-              matchLabels:
-                testing.upbound.io/elb: elbv2
+              - matchLabels:
+                  testing.upbound.io/elb: elbv2
     loadBalancerArnSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
