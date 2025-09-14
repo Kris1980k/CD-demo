@@ -9,6 +9,7 @@ spec:
     availabilityZone: us-east-1d
     instanceType: t3.micro
     region: us-east-1
+    userData: "IyEvYmluL2Jhc2gKeXVtIHVwZGF0ZSAteQp5dW0gaW5zdGFsbCAteSBodHRwZApzeXN0ZW1jdGwgc3RhcnQgaHR0ZApzeXN0ZW1jdGwKZW5hYmxlIGh0dHBkCmVjaG8gJzxoMT5IZWxsbyB3b3JsZCBmcm9tICQoaG9zdG5hbWUgLWYpPC9oMT4nID4gL3Zhci93d3cvaHRtbC9pbmRleC5odG1sCg=="    
   providerConfigRef:
     name: default
     kind: ProviderConfig
