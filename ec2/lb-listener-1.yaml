@@ -19,7 +19,7 @@ spec:
         testing.upbound.io/elb: elbv2
     port: 80
     region: us-east-1
-    protocol: HTTP
+    protocol: HTTP    
   providerConfigRef:
     name: default
     kind: ProviderConfig
