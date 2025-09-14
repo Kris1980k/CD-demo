@@ -28,8 +28,9 @@ metadata:
   labels:
     testing.upbound.io/elb: elbv2
 spec:
-  atProvider:
-    defaultSecurityGroupId: "securityGroupId-1"
+  status:
+    atProvider:
+      defaultSecurityGroupId: "securityGroupId-1"
   forProvider:    
     cidrBlock: 172.16.0.0/16
     region: us-east-1  
