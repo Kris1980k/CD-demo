@@ -29,6 +29,14 @@ spec:
             volumeSize: 20
     instanceType: t3.micro
     region: us-east-1
+    userData: 
+      #!/bin/bash
+      yum update -y
+      yum install -y httpd
+      systemctl start httpd
+      systemctl enable httpd
+      echo '<h1>Hello wordl from $(hostname -f)</h1>' /var/www/html/index.html
+
   providerConfigRef:
     name: default
     kind: ProviderConfig
