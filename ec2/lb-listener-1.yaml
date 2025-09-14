@@ -7,7 +7,6 @@ metadata:
     testing.upbound.io/elb: elbv2
 spec:
   forProvider:
-    name : lb-listener-1
     defaultAction:        
       - forward:          
           targetGroup:
