@@ -1,0 +1,20 @@
+apiVersion: autoscaling.aws.m.upbound.io/v1beta1
+kind: Attachment
+metadata:
+  name: attch-elb-autoscalinggroup-1
+  namespace: demo
+spec:
+  forProvider:
+    autoscalingGroupNameSelector:
+      matchLabels:
+        asg: asg-1
+    elbSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
+    lbTargetGroupArnSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
+    region: us-east-1
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig
