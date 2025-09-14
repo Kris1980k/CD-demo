@@ -133,8 +133,8 @@ spec:
     toPort: 80
     ipProtocol: 'tcp' 
     region: us-east-1
-  referencedSecurityGroupIdSelector:
-    matchLabels:
-      testing.upbound.io/elb: elbv2
+    referencedSecurityGroupIdSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
      
 
