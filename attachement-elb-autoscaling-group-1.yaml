@@ -8,9 +8,6 @@ spec:
     autoscalingGroupNameSelector:
       matchLabels:
         asg: asg-1
-    elbSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
     lbTargetGroupArnSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
