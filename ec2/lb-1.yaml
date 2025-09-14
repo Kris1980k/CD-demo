@@ -134,9 +134,6 @@ spec:
     ipProtocol: 'tcp' 
     cidrIpv4: 0.0.0.0/0
     region: us-east-1
-    referencedSecurityGroupIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
     securityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2                
