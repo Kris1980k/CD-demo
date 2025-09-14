@@ -141,7 +141,7 @@ spec:
         testing.upbound.io/elb: elbv2                
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
-kind: SecurityGroupIngressRule
+kind: SecurityGroupEgressRule
 metadata:
   name: securitygroup-rule-2
   namespace: demo
