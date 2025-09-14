@@ -136,7 +136,7 @@ spec:
     referencedSecurityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
-    SecurityGroupIdSelector:
+    securityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
      
