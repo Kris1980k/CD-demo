@@ -10,7 +10,7 @@ spec:
     name: lbtargetgroup-1
     port: 80
     protocol: HTTP
-    targetType: ip
+    targetType: instance
     region: us-east-1
     vpcIdSelector:
       matchLabels:
