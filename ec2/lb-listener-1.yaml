@@ -11,9 +11,9 @@ spec:
     defaultAction:
       - forward:
           targetGroup:
-            arnSelector:
-              - matchLabels:
-                  testing.upbound.io/elb: elbv2
+            - arnSelector:
+               matchLabels:
+                testing.upbound.io/elb: elbv2
     loadBalancerArnSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
