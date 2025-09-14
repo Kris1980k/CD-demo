@@ -12,6 +12,7 @@ spec:
         testing.upbound.io/elb: elbv2
     loadBalancerType: application
     name: lb-1
+    port: 8080
     region: us-east-1  
     securityGroupSelector:
       matchLabels:
