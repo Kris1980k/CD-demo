@@ -131,7 +131,8 @@ spec:
   forProvider:
     fromPort: 80
     toPort: 80
-    ipProtocol: 'tcp' 
+    ipProtocol: 'tcp'
+    cidrIpv4: 0.0.0.0/0 
     region: us-east-1
     securityGroupIdSelector:
       matchLabels:
