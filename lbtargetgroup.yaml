@@ -3,7 +3,8 @@ kind: LBTargetGroup
 metadata: 
   name: lbtargetgroup-1
   namespace: demo
-  labels
+  labels:
+    testing.upbound.io/elb: elbv2
 spec:
   forProvider:
     name: lbtargetgroup-1
