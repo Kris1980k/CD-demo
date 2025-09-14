@@ -28,15 +28,15 @@ metadata:
   labels:
     testing.upbound.io/elb: elbv2
 spec:
-  status:
-    atProvider:
-      defaultSecurityGroupId: "securityGroupId-1"
   forProvider:    
     cidrBlock: 172.16.0.0/16
     region: us-east-1  
   providerConfigRef:
     name: default
     kind: ProviderConfig
+status:
+    atProvider:
+      defaultSecurityGroupId: "securityGroupId-1"
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: InternetGateway
