@@ -8,12 +8,13 @@ metadata:
 spec:
   forProvider:
     name : lb-listener-1
-    defaultAction:
-      - forward:
+    defaultAction:        
+      - forward:          
           targetGroup:
             - arnSelector:
                matchLabels:
                 testing.upbound.io/elb: elbv2
+        type: forward
     loadBalancerArnSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
