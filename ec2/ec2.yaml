@@ -6,9 +6,11 @@ metadata:
 spec:
   forProvider:
     region: us-east-1
-    launchTemplate:
-      name: template-1
-      version: $Latest
+    imageId: ami-0b09ffb6d8b58ca91
+    instanceType: t3.micro
+    region: us-east-1
+    availabilityZone: us-east-1a
+    subnetId: subnet-00f9e75248e1091fe
   providerConfigRef:
     name: default
     kind: ProviderConfig
