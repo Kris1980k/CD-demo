@@ -75,9 +75,11 @@ spec:
     name: default
     kind: ProviderConfig  
   forProvider:
-    ipProtocol: tcp
+    ipProtocol: '-1'
     description: Allow egress traffic to all ips x
     region: us-east-1
+    fromPort: 0 
+    toPort: 0
     cidrIpv4: 0.0.0.0/0
     referencedSecurityGroupIdSelector:
       matchLabels:
