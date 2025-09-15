@@ -53,7 +53,7 @@ spec:
   forProvider:
     fromPort: 80
     toPort: 80
-    ipProtocol: ipv4
+    ipProtocol: '1'
     cidrIpv4: 0.0.0.0/0 
     referencedSecurityGroupIdSelector:
       matchLabels:
