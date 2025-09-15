@@ -7,7 +7,7 @@ spec:
   forProvider:
     region: us-east-1
     launchTemplate:
-      name: ec2-launch-template-1
+      name: template-1
       version: $Latest
   providerConfigRef:
     name: default
