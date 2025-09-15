@@ -5,6 +5,7 @@ metadata:
   namespace: demo
 spec:
   forProvider:
+    region: us-east-1
     launchTemplate:
       name: template-1
   providerConfigRef:
