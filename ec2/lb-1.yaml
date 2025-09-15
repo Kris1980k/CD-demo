@@ -37,9 +37,7 @@ spec:
     region: us-east-1
     tags:
       Name: east
-    vpcIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
+    vpcId: vpc-080cd38eecbd53182
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: SecurityGroupIngressRule
