@@ -54,7 +54,7 @@ spec:
     kind: ProviderConfig  
   forProvider:    
     ipProtocol: tcp
-    fromPort: 22
+    fromPort: 80
     toPort: 80
     cidrIpv4: 0.0.0.0/0
     referencedSecurityGroupIdSelector:
@@ -64,6 +64,30 @@ spec:
     securityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2                
+---
+apiVersion: ec2.aws.m.upbound.io/v1beta1
+kind: SecurityGroupIngressRule
+metadata:
+  name: securitygroup-rule-ssh
+  namespace: demo
+  labels:
+    testing.upbound.io/elb: elbv2
+spec:
+  providerConfigRef:
+    name: default
+    kind: ProviderConfig  
+  forProvider:    
+    ipProtocol: tcp
+    fromPort: 22
+    toPort: 22
+    cidrIpv4: 0.0.0.0/0
+    referencedSecurityGroupIdSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2
+    region: us-east-1
+    securityGroupIdSelector:
+      matchLabels:
+        testing.upbound.io/elb: elbv2    
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: SecurityGroupEgressRule
