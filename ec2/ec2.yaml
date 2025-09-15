@@ -13,7 +13,7 @@ spec:
     subnetId: subnet-00f9e75248e1091fe
     associatePublicIpAddress: true 
     vpcSecurityGroupIds: 
-     - sg-0155765612c29da07
+     - sg-0aa7b0173fddd600a
   providerConfigRef:
     name: default
     kind: ProviderConfig
