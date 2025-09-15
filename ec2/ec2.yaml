@@ -6,7 +6,7 @@ metadata:
 spec:
   forProvider:
     region: us-east-1
-    imageId: ami-0b09ffb6d8b58ca91
+    ImageId: ami-0b09ffb6d8b58ca91
     instanceType: t3.micro
     region: us-east-1
     availabilityZone: us-east-1a
