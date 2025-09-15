@@ -78,6 +78,8 @@ spec:
     ipProtocol: "1"
     description: Allow egress traffic to all ips
     cidrIpv4: 0.0.0.0/0
+    fromPort: 0
+    toPort: 0
     region: us-east-1
     referencedSecurityGroupIdSelector:
       matchLabels:
