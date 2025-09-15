@@ -13,7 +13,6 @@ spec:
     loadBalancerType: application
     name: lb-1
     region: us-east-1  
-    vpcId: vpc-080cd38eecbd53182
     subnets: 
     - subnet-00f9e75248e1091fe
     - subnet-03031ee8a9d08f700
