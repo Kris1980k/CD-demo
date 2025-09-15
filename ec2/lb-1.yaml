@@ -21,82 +21,6 @@ spec:
     kind: ProviderConfig
 ---
 apiVersion: ec2.aws.m.upbound.io/v1beta1
-kind: VPC
-metadata:
-  name: vpc-1
-  namespace: demo
-  labels:
-    testing.upbound.io/elb: elbv2
-spec:
-  forProvider:    
-    cidrBlock: 172.16.0.0/16
-    region: us-east-1  
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
-status:
-    atProvider:
-      defaultSecurityGroupId: "securityGroupId-1"
----
-apiVersion: ec2.aws.m.upbound.io/v1beta1
-kind: InternetGateway
-metadata:
-  name: internet-gateway-1
-  namespace: demo
-  labels:
-    testing.upbound.io/elb: elbv2
-spec:
-  forProvider:
-    vpcIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
-    region: us-east-1
-    vpcIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
----
-apiVersion: ec2.aws.m.upbound.io/v1beta1
-kind: Subnet
-metadata:
-  name: subnet-1
-  namespace: demo
-  labels:
-    testing.upbound.io/elb: elbv2
-spec:
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
-  forProvider:
-    availabilityZone: us-east-1a
-    cidrBlock: 172.16.10.0/24
-    region: us-east-1
-    vpcIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
----
-apiVersion: ec2.aws.m.upbound.io/v1beta1
-kind: Subnet
-metadata:
-  name: subnet-2
-  namespace: demo
-  labels:
-    testing.upbound.io/elb: elbv2
-spec:
-  providerConfigRef:
-    name: default
-    kind: ProviderConfig
-  forProvider:
-    availabilityZone: us-east-1b
-    cidrBlock: 172.16.20.0/24
-    region: us-east-1
-    vpcIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
----
-apiVersion: ec2.aws.m.upbound.io/v1beta1
 kind: SecurityGroup
 metadata:
   name: securitygroup-1
@@ -108,8 +32,8 @@ spec:
     name: default
     kind: ProviderConfig
   forProvider:
-    description: Allow TLS inbound traffic
-    name: allow_tls
+    description: Allow HTT inbound traffic
+    name: allow_HTTP
     region: us-east-1
     tags:
       Name: east
