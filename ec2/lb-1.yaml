@@ -32,7 +32,7 @@ spec:
     name: default
     kind: ProviderConfig
   forProvider:
-    description: Allow HTT inbound traffic
+    description: Allow HTTP inbound traffic
     name: allow_HTTP
     region: us-east-1
     tags:
