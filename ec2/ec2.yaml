@@ -5,11 +5,8 @@ metadata:
   namespace: demo
 spec:
   forProvider:
-    ami: ami-0b09ffb6d8b58ca91
-    availabilityZone: us-east-1d
-    instanceType: t3.micro
-    region: us-east-1
-    userData: "IyEvYmluL2Jhc2gKeXVtIHVwZGF0ZSAteQp5dW0gaW5zdGFsbCAteSBodHRwZApzeXN0ZW1jdGwgc3RhcnQgaHR0ZApzeXN0ZW1jdGwKZW5hYmxlIGh0dHBkCmVjaG8gJzxoMT5IZWxsbyB3b3JsZCBmcm9tICQoaG9zdG5hbWUgLWYpPC9oMT4nID4gL3Zhci93d3cvaHRtbC9pbmRleC5odG1sCg=="    
+    launchTemplate:
+      name: template-1
   providerConfigRef:
     name: default
     kind: ProviderConfig
@@ -20,14 +17,11 @@ metadata:
   name: ec2-launch-template-1
   namespace: demo
   labels: 
-    template: template1
+    template: template-1
 spec:
   forProvider:
+    name: template-1
     imageId: ami-0b09ffb6d8b58ca91
-    blockDeviceMappings:
-      - deviceName: /dev/sda1
-        ebs:
-          volumeSize: 20
     instanceType: t3.micro
     region: us-east-1
     userData: "IyEvYmluL2Jhc2gKIyBVc2UgdGhpcyBmb3IgeW91ciB1c2VyIGRhdGEgKHNjcmlwdCBmcm9tIHRvcCB0byBib3R0b20pCiMgaW5zdGFsbCBodHRwZCAoTGludXggMiB2ZXJzaW9uKQp5dW0gdXBkYXRlIC15Cnl1bSBpbnN0YWxsIC15IGh0dHBkCnN5c3RlbWN0bCBzdGFydCBodHRwZApzeXN0ZW1jdGwgZW5hYmxlIGh0dHBkCmVjaG8gIjxoMT5IZWxsbyBXb3JsZCBmcm9tICQoaG9zdG5hbWUgLWYpPC9oMT4iID4gL3Zhci93d3cvaHRtbC9pbmRleC5odG1sCg=="
