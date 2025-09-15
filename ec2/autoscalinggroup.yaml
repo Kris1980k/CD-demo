@@ -15,6 +15,7 @@ spec:
       idSelector:
           matchLabels:
             template: template1
+          namespace: demo
   providerConfigRef:
     name: default
     kind: ProviderConfig
