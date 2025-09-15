@@ -79,7 +79,7 @@ spec:
     description: Allow egress traffic to all ips
     cidrIpv4: 0.0.0.0/0
     fromPort: 0
-    toPort: 0
+    toPort: 65535
     region: us-east-1
     referencedSecurityGroupIdSelector:
       matchLabels:
