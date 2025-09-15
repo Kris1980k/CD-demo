@@ -7,10 +7,7 @@ spec:
   forProvider:
     region: us-east-1
     launchTemplate:
-      name: template-1
-    vpcSecurityGroupIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
+      name: ec2-launch-template-1
   providerConfigRef:
     name: default
     kind: ProviderConfig
