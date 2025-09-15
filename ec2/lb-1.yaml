@@ -78,6 +78,7 @@ spec:
     ipProtocol: '-1'
     description: Allow egress traffic to all ips x
     region: us-east-1
+    cidrIpv4: 0.0.0.0/0
     referencedSecurityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
