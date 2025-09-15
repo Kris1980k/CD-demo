@@ -54,7 +54,6 @@ spec:
     fromPort: 80
     toPort: 80
     ipProtocol: '6'
-    cidrIpv4: 0.0.0.0/0   
     referencedSecurityGroupIdSelector:
       matchLabels:
         testing.upbound.io/elb: elbv2
@@ -75,7 +74,6 @@ spec:
     name: default
     kind: ProviderConfig  
   forProvider:
-    cidrIpv4: 0.0.0.0/0 
     ipProtocol: '-1'
     description: Allow egress traffic to all ips x
     region: us-east-1
