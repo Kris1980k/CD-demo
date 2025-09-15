@@ -16,7 +16,7 @@ spec:
     vpcId: vpc-080cd38eecbd53182
     subnets: 
     - subnet-00f9e75248e1091fe
-    - subnet-00f9e75248e1091fe
+    - subnet-03031ee8a9d08f700
     securityGroups: 
     - sg-0aa7b0173fddd600a
   providerConfigRef:
