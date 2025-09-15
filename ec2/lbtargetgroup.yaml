@@ -12,9 +12,7 @@ spec:
     protocol: HTTP
     targetType: instance
     region: us-east-1
-    vpcIdSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
+    vpcId: vpc-080cd38eecbd53182
       
   providerConfigRef:
     name: default
