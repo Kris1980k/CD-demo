@@ -13,9 +13,12 @@ spec:
     loadBalancerType: application
     name: lb-1
     region: us-east-1  
-    securityGroupSelector:
-      matchLabels:
-        testing.upbound.io/elb: elbv2
+    vpcId: vpc-080cd38eecbd53182
+    subnets: 
+    - subnet-00f9e75248e1091fe
+    - subnet-00f9e75248e1091fe
+    securityGroups: 
+    - sg-0aa7b0173fddd600a
   providerConfigRef:
     name: default
     kind: ProviderConfig
