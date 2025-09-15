@@ -12,7 +12,8 @@ spec:
     availabilityZone: us-east-1a
     subnetId: subnet-00f9e75248e1091fe
     associatePublicIpAddress: true 
-    vpcSecurityGroupIds: sg-0155765612c29da07
+    vpcSecurityGroupIds: 
+     - sg-0155765612c29da07
   providerConfigRef:
     name: default
     kind: ProviderConfig
