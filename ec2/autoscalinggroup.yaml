@@ -12,9 +12,8 @@ spec:
     region: us-east-1
     availabilityZones: [us-east-1a,us-east-1b,us-east-1c,us-east-1d]
     launchTemplate: 
-      idSelector:
-          matchLabels:
-            template: template1
+      idRef:
+          name: ec2-launch-template-1
           namespace: demo
   providerConfigRef:
     name: default
