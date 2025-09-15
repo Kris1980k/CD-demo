@@ -76,7 +76,7 @@ spec:
     kind: ProviderConfig  
   forProvider:
     ipProtocol: '1'
-    description: Allow egress traffic to all ips
+    description: Allow egress traffic to all ips x
     cidrIpv4: 0.0.0.0/0
     region: us-east-1
     referencedSecurityGroupIdSelector:
