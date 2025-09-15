@@ -50,9 +50,8 @@ spec:
   providerConfigRef:
     name: default
     kind: ProviderConfig  
-  forProvider:
-    fromPort: 80
-    toPort: 80
+  forProvider:    
+    ipProtocol: '6'
     cidrIpv4: 0.0.0.0/0
     referencedSecurityGroupIdSelector:
       matchLabels:
