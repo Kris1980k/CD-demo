@@ -51,7 +51,7 @@ spec:
     name: default
     kind: ProviderConfig  
   forProvider:    
-    ipProtocol: '6'
+    ipProtocol: tcp
     fromPort: 22
     toPort: 80
     cidrIpv4: 0.0.0.0/0
