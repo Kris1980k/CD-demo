@@ -18,6 +18,8 @@ spec:
         properties:
           spec:   
             type: object 
-            properties: 
+            properties:
+              bucket-name: 
+                type: string
               region:
                 type: string
