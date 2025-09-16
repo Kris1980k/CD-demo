@@ -1,13 +1,13 @@
 apiVersion: apiextensions.crossplane.io/v2
 kind: CompositeResourceDefinition
 metadata:
-  name:  apps.example.crossplane.io
+  name:  Xs3.crossplane.io
 spec:
   scope: Namespaced
-  group: example.crossplane.io
+  group: Xs3.crossplane.io
   names: 
-    kind: XDeploy
-    plural: xdeploys
+    kind: XS3
+    plural: xs3s
   versions: 
   - name: v1alpha1
     schema: 
