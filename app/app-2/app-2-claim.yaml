@@ -1,0 +1,7 @@
+apiVersion: example.org/v1
+kind: Xmys3
+metadata:
+  name: my-xmys3
+spec:
+    name: "my-bucket-crossplane"
+    region: "us-east-1"
