@@ -19,10 +19,11 @@ spec:
         base:
           apiVersion: s3.aws.m.upbound.io/v1beta1
           kind: Bucket
-        providerConfigRef:
-          name: default
-          kind: ProviderConfig  
-            
+          spec:
+            providerConfigRef:
+            name: default
+            kind: ProviderConfig  
+              
         patches:
         - type: FromCompositeFieldPath
           fromFieldPath: spec.region
