@@ -25,4 +25,10 @@ spec:
           toFieldPath: spec.forProvider.region
           fromFieldPath: spec.name
           toFieldPath: spec.forProvider.name
+          fromFieldPath: spec.name
+          toFieldPath: spec.metadata.name
+          transforms:
+                  - type: string
+                    string:
+                      fmt: "%s"
 
