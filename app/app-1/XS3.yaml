@@ -7,3 +7,4 @@ spec:
   crossplane:
     compositionRef:
       name: composition-app1
+      region: us-east-1
