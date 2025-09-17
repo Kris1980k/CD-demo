@@ -23,13 +23,13 @@ spec:
         - type: FromCompositeFieldPath
           fromFieldPath: spec.region
           toFieldPath: spec.forProvider.region
+        - type: FromCompositeFieldPath
           fromFieldPath: spec.name
-          toFieldPath: spec.forProvider.name
-          fromFieldPath: spec.name
-          toFieldPath: spec.metadata.name
-          transforms:
-                  - type: string
-                    string:
-                      type: Format
-                      fmt: "%s"
+          toFieldPath: metadata.name
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.labels
+          toFieldPath: metadata.labels
+          policy:
+            mergeOptions:
+              keepMapValues: true
 

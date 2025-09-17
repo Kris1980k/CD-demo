@@ -8,6 +8,9 @@ spec:
   names: 
     kind: Xs3
     plural: xs3s
+  claimNames:
+    kind: Xs3Claim
+    plural: xs3claims
   versions:
   - name: v1
     served: true

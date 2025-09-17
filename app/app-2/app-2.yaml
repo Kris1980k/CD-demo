@@ -1,8 +1,0 @@
-apiVersion: example.org/v1
-kind: Xs3
-metadata:
-  name: my-xs3
-  namespace: demo
-spec: 
-  name: "crossplane-bucket-1"
-  region: "us-east-1"
