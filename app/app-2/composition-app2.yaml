@@ -26,6 +26,9 @@ spec:
         - type: FromCompositeFieldPath
           fromFieldPath: spec.name
           toFieldPath: metadata.name
+        - type: FromCompositeFieldPath
+          fromFieldPath: spec.namespace
+          toFieldPath: metadata.namespace
 
 
 
