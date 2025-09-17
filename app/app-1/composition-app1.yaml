@@ -2,7 +2,6 @@ apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
   name: composition-app1
-  namespace: demo
 spec:
   compositeTypeRef:
     apiVersion: crossplane.io/v1alpha1
@@ -17,6 +16,7 @@ spec:
         kind: Resources
         resources:
         - name: s3-bucket-comp
+          namespace: demo
           base:            
             apiVersion: s3.aws.m.upbound.io/v1beta1
             kind: Bucket          
