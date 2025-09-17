@@ -5,7 +5,7 @@ metadata:
   namespace: demo
 spec:
   compositeTypeRef:
-    apiVersion: xs3s.crossplane.io/v1alpha1
+    apiVersion: crossplane.io/v1alpha1
     kind: XS3
   mode: Pipeline
   pipeline:
