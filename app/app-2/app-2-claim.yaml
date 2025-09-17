@@ -3,6 +3,7 @@ kind: Xs3Claim
 metadata:
   name: my-xs3-claim
 spec: 
+  name: "crossplane-bucket-1"
   region: "us-east-1"
   compositionRef:
     name: s3bucket-crossplane
