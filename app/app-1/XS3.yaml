@@ -2,7 +2,7 @@ apiVersion: xs3s.crossplane.io/v1alpha1
 kind: XS3
 metadata: 
   namespace: demo
-  name: xs3s-1
+  name: xs3-1
 spec: 
   crossplane:
     compositionRef:
