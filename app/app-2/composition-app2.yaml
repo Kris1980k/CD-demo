@@ -30,5 +30,6 @@ spec:
           transforms:
                   - type: string
                     string:
+                      type: fmt
                       fmt: "%s"
 
