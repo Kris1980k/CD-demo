@@ -8,3 +8,4 @@ spec:
   region: "us-east-1"
   compositionRef:
     name: s3bucket-crossplane
+    namespace: demo

@@ -2,6 +2,7 @@ apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
   name: s3bucket-crossplane
+  namespace: demo
 spec:
   compositeTypeRef:
     apiVersion: example.org/v1
