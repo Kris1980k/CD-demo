@@ -20,10 +20,10 @@ spec:
           spec:   
             type: object 
             properties:
-              bucket-name: 
+              name: 
                 type: string
               region:
                 type: string
             required:
-              - bucket-name
+              - name
               - region

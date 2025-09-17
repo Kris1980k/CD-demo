@@ -18,8 +18,4 @@ spec:
         resources:
         - name: s3-bucket
           base: s3.aws.m.upbound.io/v1beta1
-          kind: Bucket
-          spec:
-            forProvider:
-              bucket-name: "xs3-1"
-              region: "us-east-1"
+          kind: Bucket          
