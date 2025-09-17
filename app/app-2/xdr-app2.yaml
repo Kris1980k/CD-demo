@@ -22,12 +22,13 @@ spec:
         properties:
           spec:
             type: object
+            name:
+              region:
+                type: string
             properties:
               region:
                 type: string
-              namespace:
-                type: string
             required:
-              - namespace
               - region
+              - name
 
