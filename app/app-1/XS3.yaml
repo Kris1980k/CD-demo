@@ -1,4 +1,4 @@
-apiVersion: apiextensions.crossplane.io/v1
+apiVersion: xs3s.crossplane.io/v1alpha1
 kind: XS3
 metadata: 
   namespace: demo
