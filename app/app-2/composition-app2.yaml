@@ -33,7 +33,7 @@ spec:
           toFieldPath: metadata.name
         - type: FromCompositeFieldPath
           fromFieldPath: spec.namespace
-          toFieldPath: metadata.namespace
+          toFieldPath: metadata.name
 
 
 
