@@ -2,9 +2,10 @@ apiVersion: apiextensions.crossplane.io/v2
 kind: CompositeResourceDefinition
 metadata:
   name:  xs3.crossplane.io
+  namespace: demo
 spec:
   scope: Namespaced
-  group: xs3s.crossplane.io
+  group: crossplane.io
   names: 
     kind: XS3
     plural: xs3s
