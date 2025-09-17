@@ -23,3 +23,8 @@ spec:
                 type: string
               name: 
                 type: string
+            providerConfigRef:
+              kind:
+                type: string
+              name:
+                type: string
