@@ -17,7 +17,7 @@ spec:
         resources:
         - name: s3-bucket-comp
           base:
-            apiVersion: s3.aws.upbound.io/v1beta1   # 👈 ojo, confirma que sea este group
+            apiVersion: s3.aws.upbound.io/v1beta1  
             kind: Bucket
             spec:
               forProvider:
