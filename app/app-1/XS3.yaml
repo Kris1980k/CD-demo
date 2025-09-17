@@ -4,7 +4,5 @@ metadata:
   namespace: demo
   name: xs3-1
 spec: 
-  crossplane:
-    compositionRef:
-      name: composition-app1
-      region: us-east-1
+  name: composition-app1
+  region: us-east-1
