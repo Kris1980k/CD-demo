@@ -17,5 +17,6 @@ spec:
         kind: Resources
         resources:
         - name: s3-bucket-comp
-          apiVersion: s3.aws.m.upbound.io/v1beta1
-          kind: Bucket          
+          base:            
+            apiVersion: s3.aws.m.upbound.io/v1beta1
+            kind: Bucket          
