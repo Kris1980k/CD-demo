@@ -2,6 +2,7 @@ apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
   name: composition-app1
+  namespace: demo
 spec:
   compositeTypeRef:
     apiVersion: xs3s.crossplane.io/v1alpha1
