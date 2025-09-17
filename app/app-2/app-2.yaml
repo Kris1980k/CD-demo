@@ -1,4 +1,4 @@
-apiVersion: xs3s.example.org/v1
+apiVersion: example.org/v1
 kind: Xs3
 metadata:
   name: my-Xs3

@@ -4,7 +4,7 @@ metadata:
   name: s3bucket-crossplane
 spec:
   compositeTypeRef:
-    apiVersion: xs3s.example.org/v1
+    apiVersion: example.org/v1
     kind: Xs3
   mode: Pipeline
   pipeline: 
