@@ -1,7 +1,6 @@
 apiVersion: crossplane.io/v1alpha1
 kind: XS3
 metadata: 
-  namespace: demo
   name: xs3-1
 spec: 
   name: auto-bucket-1
