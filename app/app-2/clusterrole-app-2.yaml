@@ -6,7 +6,7 @@ metadata:
     rbac.crossplane.io/aggregate-to-crossplane: "true"
 rules:
 - apiGroups:
-  - s3.aws.crossplane.io
+  - s3.aws.m.upbound.io
   resources:
   - buckets
   verbs:
