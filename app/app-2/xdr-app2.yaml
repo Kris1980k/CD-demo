@@ -25,12 +25,9 @@ spec:
             properties:
               region:
                 type: string
-              name: 
-                type: string
               namespace:
                 type: string
             required:
               - namespace
-              - name
               - region
 
