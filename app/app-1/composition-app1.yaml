@@ -16,6 +16,14 @@ spec:
         kind: Resources
         resources:
         - name: s3-bucket-comp
-          base:            
-            apiVersion: s3.aws.m.upbound.io/v1beta1
-            kind: Bucket          
+          base:
+            apiVersion: s3.aws.upbound.io/v1beta1   # 👈 ojo, confirma que sea este group
+            kind: Bucket
+            spec:
+              forProvider:
+                region: us-west-1  
+          patches:
+            - fromFieldPath: "spec.name"
+              toFieldPath: "metadata.name"
+            - fromFieldPath: "spec.region"
+              toFieldPath: "spec.forProvider.region"     
