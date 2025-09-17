@@ -30,6 +30,6 @@ spec:
           transforms:
                   - type: string
                     string:
-                      type: fmt
+                      type: Format
                       fmt: "%s"
 
