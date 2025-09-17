@@ -21,11 +21,10 @@ spec:
         type: object
         properties:
           spec:
-            type: object
-            name:
-              region:
-                type: string
+            type: object            
             properties:
+              name:
+                  type: string
               region:
                 type: string
             required:
