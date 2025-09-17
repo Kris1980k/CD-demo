@@ -16,6 +16,6 @@ spec:
         apiVersion: pt.fn.crossplane.io/v1beta1
         kind: Resources
         resources:
-        - name: s3-bucket
-          base: s3.aws.m.upbound.io/v1beta1
+        - name: s3-bucket-comp
+          apiVersion: s3.aws.m.upbound.io/v1beta1
           kind: Bucket          

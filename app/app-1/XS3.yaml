@@ -4,5 +4,5 @@ metadata:
   namespace: demo
   name: xs3-1
 spec: 
-  name: composition-app1
+  name: auto-bucket-1
   region: us-east-1
