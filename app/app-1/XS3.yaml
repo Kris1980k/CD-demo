@@ -1,0 +1,9 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: XS3
+metadata: 
+  namespace: demo
+  name: xs3s-1
+spec: 
+  crossplane:
+    compositionRef:
+      name: composition-app1
