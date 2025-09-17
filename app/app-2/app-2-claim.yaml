@@ -8,3 +8,9 @@ spec:
   namespace: "demo"
   compositionRef:
     name: s3bucket-crossplane
+
+    cannot apply ClusterRoles: cannot create object: clusterroles.rbac.authorization.k8s.io 
+    ##"crossplane:composite:xs3s.example.org:aggregate-to-browse" already exists
+
+    cannot apply rendered composite resource CustomResourceDefinition: cannot create object: customresourcedefinitions.apiextensions.k8s.io 
+    #"xs3s.example.org" already exists
