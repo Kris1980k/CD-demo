@@ -1,29 +1,72 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: composition-app1
+  name: app-yaml
 spec:
   compositeTypeRef:
-    apiVersion: crossplane.io/v1alpha1
-    kind: XS3
+    apiVersion: example.crossplane.io/v1
+    kind: App
   mode: Pipeline
   pipeline:
-    - step: patch-and-transform
-      functionRef:
-        name : function-patch-and-transform
-      input: 
-        apiVersion: pt.fn.crossplane.io/v1beta1
-        kind: Resources
-        resources:
-        - name: s3-bucket-comp
-          base:
-            apiVersion: s3.aws.upbound.io/v1beta1  
-            kind: Bucket
-            spec:
-              forProvider:
-                region: us-west-1  
-          patches:
-            - fromFieldPath: "spec.name"
-              toFieldPath: "metadata.name"
-            - fromFieldPath: "spec.region"
-              toFieldPath: "spec.forProvider.region"     
+  - step: create-deployment-and-service
+    functionRef:
+      name: crossplane-contrib-function-patch-and-transform
+    input:
+      apiVersion: pt.fn.crossplane.io/v1beta1
+      kind: Resources
+      resources:
+      - name: deployment
+        base:
+          apiVersion: apps/v1
+          kind: Deployment
+          spec:
+            replicas: 2
+            template:
+              spec:
+                containers:
+                - name: app
+                  ports:
+                  - containerPort: 80
+        patches:
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.name
+          toFieldPath: metadata.labels[example.crossplane.io/app]
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.name
+          toFieldPath: spec.selector.matchLabels[example.crossplane.io/app]
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.name
+          toFieldPath: spec.template.metadata.labels[example.crossplane.io/app]
+        - type: FromCompositeFieldPath
+          fromFieldPath: spec.image
+          toFieldPath: spec.template.spec.containers[0].image
+        - type: ToCompositeFieldPath
+          fromFieldPath: status.availableReplicas
+          toFieldPath: status.replicas
+        readinessChecks:
+        - type: MatchCondition
+          matchCondition:
+            type: Available
+            status: "True"
+      - name: service
+        base:
+          apiVersion: v1
+          kind: Service
+          spec:
+            ports:
+            - protocol: TCP
+              port: 8080
+              targetPort: 80
+        patches:
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.name
+          toFieldPath: metadata.labels[example.crossplane.io/app]
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.name
+          toFieldPath: spec.selector[example.crossplane.io/app]
+        - type: ToCompositeFieldPath
+          fromFieldPath: spec.clusterIP
+          toFieldPath: status.address
+        readinessChecks:
+        - type: NonEmpty
+          fieldPath: spec.clusterIP
