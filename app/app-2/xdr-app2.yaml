@@ -11,6 +11,7 @@ spec:
   claimNames:
     kind: Xs3Claim
     plural: xs3claims
+  defaultCompositeDeletePolicy: Background
   versions:
   - name: v1
     served: true
