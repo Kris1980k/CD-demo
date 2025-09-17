@@ -23,3 +23,6 @@ spec:
                 type: string
               region:
                 type: string
+              required:
+                - bucket-name
+                - region

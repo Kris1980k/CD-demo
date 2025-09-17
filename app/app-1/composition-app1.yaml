@@ -3,3 +3,21 @@ kind: Composition
 metadata:
   name: composition-app1
 spec:
+  compositeTypeRef:
+    apiVersion: xs3.crossplane.io/v1alpha1
+    kind: xs3s
+  mode: Pipeline
+  pipeline:
+    - step: patch-and-transform
+      functionRef:
+        name : function-patch-and-transform
+      input: 
+        apiVersion: pt.fn.crossplane.io/v1beta1
+        kind: Resources
+        resources:
+        - name: s3-bucket
+          base: s3.aws.m.upbound.io/v1beta1
+          kind: Bucket
+          spec:
+            forProvider:
+              region: "us-east-1"
