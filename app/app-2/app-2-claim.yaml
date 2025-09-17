@@ -2,6 +2,7 @@ apiVersion: example.org/v1
 kind: Xs3Claim  
 metadata:
   name: my-xs3-claim
+  namespace: demo
 spec: 
   name: "crossplane-bucket-1"
   region: "us-east-1"
