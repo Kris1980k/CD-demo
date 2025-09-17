@@ -1,0 +1,28 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: s3bucket-crossplane
+spec:
+  compositeTypeRef:
+    apiVersion: xs3s.example.org/v1
+    kind: Xs3
+  mode: Pipeline
+  pipeline: 
+  - step: patch-and-transform
+    functionRef
+      name: function-patch-and-transform
+    input:
+      apiVersion: pt.fn.crossplane.io/v1beta1
+      kind: Resources
+      resources: 
+      - name: s3-bucket-crossplane-1
+        base:
+          apiVersion: s3.aws.m.upbound.io/v1beta1
+          kind: Bucket
+        patches:
+        - type: FromCompositeFieldPath
+          fromFieldPath: spec.region
+          toFieldPath: spec.forProvider.region
+          fromFieldPath: spec.name
+          toFieldPath: spec.forProvider.name
+

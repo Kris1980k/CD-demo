@@ -1,0 +1,7 @@
+apiVersion: xs3s.example.org/v1
+kind: Xs3
+metadata:
+  name: my-Xs3
+spec: 
+  name: "crossplane-bucket-1"
+  region: "us-east-1"
