@@ -11,14 +11,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER && newgrp docker </pre>
 
-### Install KubeCTL
-
-<pre>curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/
-kubectl version --client -o json</pre>
-
-### Install K3s (lightweight kubernetes)
+### Install K3s (lightweight kubernetes with kubectl integrated)
 
 <pre>curl -sfL https://get.k3s.io | sh - 
 sudo k3s kubectl get node 
