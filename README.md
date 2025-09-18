@@ -33,9 +33,9 @@ kubectl get all --namespace=argocd</pre>
 
 ### Install ArgoCD CLI
 
-<pre>```yaml curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+<pre>curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
-rm argocd-linux-amd64 ```</pre>
+rm argocd-linux-amd64 </pre>
 
 ### Create a nodeport via YAML to connect to the service
 <pre>
